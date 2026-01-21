@@ -1,0 +1,1 @@
+cargo:rustc-env=MIME_TYPES_GENERATED_PATH=/home/minion/dev/bad-apple/target/release/build/mime_guess-37034d3ba3be999e/out/mime_types_generated.rs

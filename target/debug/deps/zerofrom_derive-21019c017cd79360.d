@@ -1,0 +1,6 @@
+/home/minion/dev/bad-apple/target/debug/deps/zerofrom_derive-21019c017cd79360.d: /home/minion/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zerofrom-derive-0.1.6/src/lib.rs /home/minion/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zerofrom-derive-0.1.6/src/visitor.rs
+
+/home/minion/dev/bad-apple/target/debug/deps/libzerofrom_derive-21019c017cd79360.so: /home/minion/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zerofrom-derive-0.1.6/src/lib.rs /home/minion/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zerofrom-derive-0.1.6/src/visitor.rs
+
+/home/minion/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zerofrom-derive-0.1.6/src/lib.rs:
+/home/minion/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zerofrom-derive-0.1.6/src/visitor.rs:
