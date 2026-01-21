@@ -23,6 +23,11 @@ This project uses a **Rust preprocessing + local Actix server + lightweight user
 - Hours column of the calendar is preserved
 
 ---
+## ▶️ Demo
+
+https://github.com/user-attachments/assets/32361f4d-f84f-4641-b539-923b176d72fd
+
+---
 
 ## 🧠 Architecture Overview
 
@@ -176,4 +181,4 @@ Rectangle merging reduces DOM updates by **5–10×**.
 
 - **Bad Apple!!** — Alstroemeria Records  
 - Inspiration: [comabay](https://github.com/comaybay/bad-apple-uit-timetable)
-- Implementation: Me
+- Implementation: Me & chatgpt
