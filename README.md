@@ -5,8 +5,6 @@ Render **Bad Apple!!** inside the UNMSM timetable by dynamically repainting the 
 
 This project uses a **Rust preprocessing + local Actix server + lightweight userscript** pipeline for performance, correctness, and maintainability.
 
----
-
 ## ✨ Features
 
 - High-resolution **Bad Apple!!** animation
@@ -22,12 +20,9 @@ This project uses a **Rust preprocessing + local Actix server + lightweight user
 - Browser playback via **Violentmonkey**
 - Hours column of the calendar is preserved
 
----
 ## ▶️ Demo
 
 https://github.com/user-attachments/assets/32361f4d-f84f-4641-b539-923b176d72fd
-
----
 
 ## 🧠 Architecture Overview
 
@@ -42,8 +37,6 @@ https://github.com/user-attachments/assets/32361f4d-f84f-4641-b539-923b176d72fd
 - Renders rectangles efficiently using CSS Grid
 - Syncs animation + subtitles to audio time
 - Handles layout and UI only (no heavy parsing)
-
----
 
 ## 📁 Project Structure
 
@@ -77,8 +70,6 @@ bad-apple/
 └─ README.md
 ```
 
----
-
 ## ⚙️ Requirements
 
 ### System
@@ -89,8 +80,6 @@ bad-apple/
 ### Browser
 - Firefox or Chromium
 - Violentmonkey extension
-
----
 
 ## 🎞️ Step 1 — Extract Frames (FFmpeg)
 
@@ -104,16 +93,12 @@ ffmpeg -y -i bad_apple.mp4 \
   frames/frame_%05d.png
 ```
 
----
-
 ## 🔊 Step 2 — Extract Audio
 
 ```
 mkdir -p out
 ffmpeg -y -i bad_apple.mp4 -vn -acodec libmp3lame -q:a 2 out/audio.mp3
 ```
-
----
 
 ## 🦀 Step 3 — Convert Frames (Rust)
 
@@ -122,15 +107,11 @@ cargo run --release --bin convert_rectframes -- \
   --w 256 --h 192 --fps 30 --in frames --out out/rectFrames.json
 ```
 
----
-
 ## 📝 Step 4 — Subtitles (Rust)
 
 - Input: `.srt` files in `lyrics/`
 - Output: `.json` files in `out/`
 - Automatically regenerated when running the server if missing or outdated
-
----
 
 ## 🌐 Step 5 — Run Actix Server
 
@@ -143,8 +124,6 @@ Server address:
 ```
 http://127.0.0.1:8080
 ```
-
----
 
 ## 🧩 Step 6 — Install Userscript
 
@@ -159,8 +138,6 @@ Target page:
 https://sum.unmsm.edu.pe/alumnoWebSum/v2/reportes/horarios
 ```
 
----
-
 ## ▶️ Playback & Sync
 
 - Audio is the master clock
@@ -169,13 +146,10 @@ https://sum.unmsm.edu.pe/alumnoWebSum/v2/reportes/horarios
 ```
 frame = currentTime × (totalFrames / audioDuration)
 ```
----
 
 ## 🚀 Performance Notes
 
 Rectangle merging reduces DOM updates by **5–10×**.
-
----
 
 ## 🙏 Credits
 
